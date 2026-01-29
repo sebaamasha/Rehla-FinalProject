@@ -17,18 +17,7 @@ function ApiPreview() {
     return favorites.some((f) => f.id === id);
   }
 
-  function toggleFav(dest) {
-    const item = {
-      id: dest._id,
-      title: dest.title,
-      location: dest.location,
-      description: dest.description,
-      imageUrl: dest.imageUrl,
-    };
-    if (isFav(dest._id)) dispatch(removeFavorite(dest._id));
-    else dispatch(addFavorite(item));
-  }
-
+  
   if (loading) return <p className="state-text">Loading destinations...</p>;
   if (error) return <p className="state-text error">{error}</p>;
   if (destinations.length === 0) return null;
