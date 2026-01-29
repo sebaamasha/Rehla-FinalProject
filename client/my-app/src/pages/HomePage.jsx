@@ -5,7 +5,7 @@ import ApiPreview from "../components/ApiPreview";
 import useFetch from "../hooks/useFetch";
 import { useAuth } from "../context/AuthContext";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = process.env.REACT_APP_API_BASE;
 
 function HomePage() {
   const { data, loading, error, refetch } = useFetch(`${API_BASE}/api/stories`);

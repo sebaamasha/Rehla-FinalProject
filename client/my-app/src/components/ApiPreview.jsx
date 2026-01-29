@@ -3,7 +3,7 @@ import { addFavorite, removeFavorite } from "../redux/favoritesSlice";
 import useFetch from "../hooks/useFetch";
 import TripCard from "./TripCard";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = process.env.REACT_APP_API_BASE;
 
 function ApiPreview() {
   const dispatch = useDispatch();

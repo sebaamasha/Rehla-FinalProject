@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addFavorite, removeFavorite } from "../redux/favoritesSlice";
 import useFetch from "../hooks/useFetch";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = process.env.REACT_APP_API_BASE;
 
 function ApiPage() {
   const dispatch = useDispatch();

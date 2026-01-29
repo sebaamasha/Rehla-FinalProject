@@ -32,7 +32,7 @@ function TripCard({
   const imgSrc = trip.imageUrl
     ? trip.imageUrl.startsWith("http")
       ? trip.imageUrl
-      : `http://localhost:5000${trip.imageUrl}`
+      : `${process.env.REACT_APP_API_BASE}${trip.imageUrl}`
     : FALLBACK_IMG;
 
   return (
