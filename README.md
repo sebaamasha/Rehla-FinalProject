@@ -1,23 +1,52 @@
-Rehla – Travel Stories App
+# Rehla – Travel Stories Platform (Final Project)
 
-Rehla is a React project that allows users to explore travel stories, submit their own travel experiences.
+Rehla is a application that allows users to explore travel stories, create and edit their own experiences, upload images, and save favorite trips.
+
+## Features
+
+- Browse travel stories  
+- Create new story with image upload  
+- Edit existing stories  
+- User authentication  
+- Save and manage favorite stories  
+- API page for fetching stories  
+- Custom hooks 
 
 ## How to Run
-1. **Server:**
-   - Go to `server` folder: `cd server`
-   - Install: `npm install`
-   - Create `.env` file based on `.env.example`.
-   - Start: `npm run dev`
 
-2. **Client:**
-   - Go to `client/my-app` folder: `cd client/my-app`
-   - Install: `npm install`
-   - Start: `npm start`
+### Server
+- Go to `server` folder: `cd server`
+- Install: `npm install`
+- Create `.env` file based on `.env.example`
+- Start: `npm run dev`
 
-## Homework 3 Features
+### Client
+- Go to `client/my-app` folder: `cd client/my-app`
+- Install: `npm install`
+- Start: `npm start`
 
-Custom Hook (useLocalStorage): used to persist the theme (light/dark) in localStorage.
+---
 
-Custom Hook (useFetch): used for API calls (data, loading, error, refetch). Used in both the API page and Home page preview.
+## Environment Variables
 
-Redux Toolkit: used for global favorites state (add/remove/clear). Favorites are shared across pages and shown in the navbar.
+Inside `server/.env`:
+
+```
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
+
+---
+
+## Database Connection
+
+The project uses MongoDB.
+
+Create a MongoDB database (local or Atlas) and place the connection string inside:
+
+```
+MONGO_URI=your_mongodb_connection_string
+```
+
+The server connects automatically on startup.
