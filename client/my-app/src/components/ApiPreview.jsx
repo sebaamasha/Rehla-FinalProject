@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addFavorite, removeFavorite } from "../redux/favoritesSlice";
 import useFetch from "../hooks/useFetch";
 import TripCard from "./TripCard";
 

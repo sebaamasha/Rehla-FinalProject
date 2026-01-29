@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 export default function useFetch(url, options = null) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  async function fetchNow(override = null) {
+  const fetchNow = useCallback(async (override = null) => {
     if (!url) return;
 
     setLoading(true);
@@ -40,11 +40,11 @@ export default function useFetch(url, options = null) {
     } finally {
       setLoading(false);
     }
-  }
+  }, [url, options]);
 
   useEffect(() => {
     fetchNow();
-  }, [url]);
+  }, [fetchNow]);
 
   return { data, loading, error, refetch: fetchNow, setData };
 }
