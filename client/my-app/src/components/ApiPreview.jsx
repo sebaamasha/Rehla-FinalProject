@@ -5,7 +5,7 @@ import TripCard from "./TripCard";
 const API_BASE = process.env.REACT_APP_API_BASE;
 
 function ApiPreview() {
-  useSelector((s) => s.favorites.items); // إذا بدك تضل مربوط بالـ store بدون ما تستعمليه
+  useSelector((s) => s.favorites.items); 
 
   const { data, loading, error } = useFetch(`${API_BASE}/api/destinations/preview`);
 
