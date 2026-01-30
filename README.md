@@ -52,7 +52,7 @@ Inside `server/.env`:
     The server connects automatically on startup.
 
 
-Live Demo
+Live Demo:
 
     Frontend:
     https://rehla-frontend.netlify.app/
