@@ -5,16 +5,11 @@ import TripCard from "./TripCard";
 const API_BASE = process.env.REACT_APP_API_BASE;
 
 function ApiPreview() {
-  const dispatch = useDispatch();
   const favorites = useSelector((s) => s.favorites.items);
 
   const { data, loading, error } = useFetch(`${API_BASE}/api/destinations/preview`);
 
   const destinations = Array.isArray(data) ? data : [];
-
-  function isFav(id) {
-    return favorites.some((f) => f.id === id);
-  }
 
   
   if (loading) return <p className="state-text">Loading destinations...</p>;
