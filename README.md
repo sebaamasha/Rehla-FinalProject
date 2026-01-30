@@ -32,21 +32,30 @@ Rehla is a application that allows users to explore travel stories, create and e
 Inside `server/.env`:
 
 ```
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-```
+    PORT=5000
+    MONGO_URI=your_mongodb_connection_string
+    JWT_SECRET=your_secret_key
+    ```
 
 ---
 
 ## Database Connection
 
-The project uses MongoDB.
+    The project uses MongoDB.
 
-Create a MongoDB database (local or Atlas) and place the connection string inside:
+    Create a MongoDB database (local or Atlas) and place the connection string inside:
 
-```
-MONGO_URI=your_mongodb_connection_string
-```
+    ```
+    MONGO_URI=your_mongodb_connection_string
+    ```
 
-The server connects automatically on startup.
+    The server connects automatically on startup.
+
+
+Live Demo
+
+    Frontend:
+    https://rehla-frontend.netlify.app/
+
+    Backend API:
+    https://rehla-finalproject.onrender.com
