@@ -1,17 +1,16 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import useFetch from "../hooks/useFetch";
 import TripCard from "./TripCard";
 
 const API_BASE = process.env.REACT_APP_API_BASE;
 
 function ApiPreview() {
-  const favorites = useSelector((s) => s.favorites.items);
+  useSelector((s) => s.favorites.items); // إذا بدك تضل مربوط بالـ store بدون ما تستعمليه
 
   const { data, loading, error } = useFetch(`${API_BASE}/api/destinations/preview`);
 
   const destinations = Array.isArray(data) ? data : [];
 
-  
   if (loading) return <p className="state-text">Loading destinations...</p>;
   if (error) return <p className="state-text error">{error}</p>;
   if (destinations.length === 0) return null;
